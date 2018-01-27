@@ -40,5 +40,5 @@ class TreeSetTest
 		{
 			System.out.println(it.next());
 		}
-	}
+	} 
 }
