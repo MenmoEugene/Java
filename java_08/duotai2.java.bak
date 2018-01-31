@@ -1,0 +1,68 @@
+abstract class Student
+{
+	abstract public void study();
+	public void sleep()
+	{
+		System.out.println("line_sleep");
+	}
+}
+
+class BaseStudent extends Student
+{
+	public void study() 
+	{
+		System.out.println("base_study");
+	}
+}
+
+class DashStudent extends Student 
+{
+	public void study()
+	{
+		System.out.println("project_study");
+	}
+	public void sleep()
+	{
+		System.out.println("hard_sleep");
+	}
+}
+class doSome
+{
+	public void doSome(Student stu)
+	{
+		stu.study();
+		stu.sleep();
+	}
+}
+
+class printline
+{
+	public void printline()
+	{
+		System.out.println("------------------");
+	}
+}
+class duotai2
+{
+	public static void main(String[] args) 
+	{
+		printline l = new printline();
+		doSome ds = new doSome();
+		ds.doSome(new BaseStudent());
+		l.printline();
+		ds.doSome(new DashStudent());
+	}
+}
+
+/*
+在多态中成员函数的特点：
+	在编译时期：参阅引用变量所属的类中是否有调用的方法。如果有 编译通过，如果没有 编译失败。
+	在运行时期：参阅对象所属的类中是否有调用的方法。
+	简单总结就是：
+					成员函数在多态调用时，编译看左边，运行看右边。
+
+	在多态中，成员变量的特点：
+								无论编译和运行，都参考左边(引用型变量所属的类)。
+	在多态中，静态成员函数的特点：
+									无论编译和运行，都参考左边。
+*/
