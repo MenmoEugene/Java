@@ -1,0 +1,3 @@
+student[wzz,78,89,90]	257
+student[xml,67,78,89]	234
+student[whl,66,77,88]	231
